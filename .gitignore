@@ -1,0 +1,27 @@
+# --- Security ---
+.env
+
+# --- Virtual Environments ---
+venv/
+env/
+
+# --- Django ---
+*.sqlite3
+db.sqlite3
+media/
+staticfiles/
+
+# --- Python ---
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# --- IDEs and OS ---
+.vscode/
+.DS_Store
+Thumbs.db
+
+# --- Project Folders ---
+doc/
+main/
