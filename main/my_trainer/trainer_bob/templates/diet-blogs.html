@@ -71,13 +71,49 @@
         </div>
       </div>
       <div class="content-block">
-        <img src="https://images.healthshots.com/healthshots/en/uploads/2023/12/22180215/Calorie-deficit.jpg" />
+        <img src="https://www.sallypattison.com.au/wp-content/uploads/2022/03/cico.jpg" />
         <div class="text-cont">
           <h3 id="title">Calorie surplus</h3>
           <p class="dat-details">April 02 2026</p>
           <p class="intro">We are here for being healthy and being in shape. That is the motive for weight-gain.</p>
           <a class="read-more" data-type="surplus">Read more..</a>
         </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="new-blog">
+    <a class="create-blog">+</a>
+  </div>
+
+  <div class="blog-window">
+    <div class="form-window">
+      <div class="blog-form">
+        <form class="blog-form" method="POST">
+
+          <span class="blog-close-btn">&times;</span>
+          <p class="blog-title">Create Blog</p>
+
+          <div class="form-group">
+            <label>Title</label>
+            <input type="text" name="title" placeholder="Enter blog title" required />
+          </div>
+
+          <div class="form-group">
+            <label>Image URL</label>
+            <input type="text" name="image" placeholder="Attach url" required />
+          </div>
+
+          <div class="form-group">
+            <label>Content</label>
+            <textarea name="content" rows="8" placeholder="Write your content" required>
+            </textarea>
+          </div>
+
+          <button type="submit">
+            Publish Blog
+          </button>
+        </form>
       </div>
     </div>
   </div>
@@ -96,6 +132,7 @@
     const calDef = {{ cal_def| safe }};
     const calSurp = {{ cal_surp| safe }};    
   </script>
+
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
     crossorigin="anonymous"></script>
