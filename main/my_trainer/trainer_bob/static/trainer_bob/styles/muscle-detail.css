@@ -1,0 +1,80 @@
+/* Wrapper */
+.exercises-wrapper {
+  max-width: 900px;
+  margin: 30px auto;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Card */
+.exercises-content {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 15px;
+  border-radius: 12px;
+  background: #ffffff;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+  transition: all 0.3s ease;
+}
+
+/* Hover effect */
+.exercises-content:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.12);
+}
+
+/* Image */
+.exercise-imgs {
+  width: 140px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 10px;
+  flex-shrink: 0;
+}
+
+/* Text container (NEW) */
+.exercises-content div {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+/* Title */
+.exe-names {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #222;
+  margin: 0;
+}
+
+/* Description */
+.exe-description {
+  font-size: 0.9rem;
+  color: #555;
+  line-height: 1.4;
+  margin: 0;
+}
+
+/* Go back button */
+.go-back-btn {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.go-back-btn a {
+  text-decoration: none;
+  color: white;
+  background: #333;
+  padding: 10px 18px;
+  border-radius: 8px;
+  font-size: 14px;
+  transition: 0.3s;
+}
+
+/* Button hover */
+.go-back-btn a:hover {
+  background: #000;
+}

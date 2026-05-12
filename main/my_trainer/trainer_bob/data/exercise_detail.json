@@ -1,0 +1,274 @@
+{
+  "back": [
+    {
+      "name": "Pull-ups",
+      "desc": "Great for building width and upper body strength.",
+      "image_url": "https://i0.wp.com/post.healthline.com/wp-content/uploads/2019/12/pull-up-pullup-gym-1296x728-header-1296x728.jpg"
+    },
+    {
+      "name": "Deadlifts",
+      "desc": "A powerhouse move for the entire posterior chain.",
+      "image_url": "https://patnutrition.be/cdn/shop/articles/deadlift-1651142430_ea39093d-5f3d-44dd-97d8-d6d96e7b920c.jpg?v=1752223926&width=1200"
+    },
+    {
+      "name": "Lat Pulldowns",
+      "desc": "Focuses on isolating the latissimus dorsi muscles.",
+      "image_url": "https://i0.wp.com/www.muscleandfitness.com/wp-content/uploads/2024/06/A-strong-male-working-out-his-back-muscles-with-lat-pulldown-variations.jpg?quality=86&strip=all"
+    },
+    {
+      "name": "Seated Cable Rows",
+      "desc": "Improves mid-back thickness and posture control.",
+      "image_url": "https://cdn.muscleandstrength.com/sites/default/files/seated-cable-row.jpg"
+    },
+    {
+      "name": "T-Bar Rows",
+      "desc": "Builds overall back density and strength.",
+      "image_url": "https://imagely.mirafit.co.uk/wp/wp-content/uploads/2025/05/wide-grip-on-a-Mirafit-T-Bar-Row-Machine-1024x683.jpg"
+    },
+    {
+      "name": "Face Pulls",
+      "desc": "Strengthens rear delts and improves shoulder stability.",
+      "image_url": "https://cdn.mos.cms.futurecdn.net/3ZAEXcd7cA3W2fMrVQY9EE-1200-80.jpg"
+    },
+    {
+      "name": "Single-Arm Dumbbell Rows",
+      "desc": "Enhances unilateral strength and corrects muscle imbalances.",
+      "image_url": "https://www.puregym.com/media/htyfe25b/single-arm-dumbbell-row.jpg?quality=80"
+    },
+    {
+      "name": "Straight-Arm Pulldowns",
+      "desc": "Isolates the lats and improves mind-muscle connection.",
+      "image_url": "https://i.ytimg.com/vi/G9uNaXGTJ4w/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLAIkeEP050HY9su_3iSRfYBChJ-FQ"
+    },
+    {
+      "name": "Inverted Rows",
+      "desc": "Bodyweight movement for back thickness and endurance.",
+      "image_url": "https://www.kettlebellkings.com/cdn/shop/articles/Inverted_row_alternative_1200x1200_crop_center.png?v=1730719186"
+    },
+    {
+      "name": "Rack Pulls",
+      "desc": "Targets upper back and traps with heavier loads.",
+      "image_url": "https://cdn.mos.cms.futurecdn.net/9Yx6BhcPDKEiENeVzZMKCX-1000-80.jpg"
+    }
+  ],
+  "legs": [
+    {
+      "name": "Squats",
+      "desc": "The king of leg exercises for quads and glutes.",
+      "image_url": "https://static.strengthlevel.com/images/exercises/squat/squat-800.jpg"
+    },
+    {
+      "name": "Lunges",
+      "desc": "Excellent for balance and unilateral leg strength.",
+      "image_url": "https://www.soletreadmills.com/cdn/shop/articles/A_man_doing_dumbbell_lunges.png?v=1749653072&width=2048"
+    },
+    {
+      "name": "Leg Press",
+      "desc": "Allows heavy loading while reducing lower back strain.",
+      "image_url": "https://intowellness.in/wp-content/uploads/2024/10/Leg_Press_Machine.jpg"
+    },
+    {
+      "name": "Romanian Deadlifts",
+      "desc": "Strengthens hamstrings and glutes effectively.",
+      "image_url": "https://hips.hearstapps.com/hmg-prod/images/stiff-leg-deadlift-1611155988.jpg?resize=980:*"
+    },
+    {
+      "name": "Leg Curls",
+      "desc": "Directly targets the hamstrings for strength and definition.",
+      "image_url": "https://energiefitness.in/cdn/shop/files/Horizontal_Leg_Curl_Machine-_BU-013A.jpg?v=1735895204&width=1500"
+    },
+    {
+      "name": "Standing Calf Raises",
+      "desc": "Builds calf size and ankle strength.",
+      "image_url": "https://5.imimg.com/data5/SELLER/Default/2023/9/340971449/TT/EW/EW/25961956/standing-calf-raise-500x500.jpg"
+    },
+    {
+      "name": "Seated Calf Raises",
+      "desc": "Focuses on the soleus muscle for calf thickness.",
+      "image_url": "https://i.ytimg.com/vi/Yh5TXz99xwY/maxresdefault.jpg"
+    },
+    {
+      "name": "Step-Ups",
+      "desc": "Enhances explosive power and unilateral coordination.",
+      "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSzo4ES3Shvgr33ITSrPOWARG_aZ_DRoDo1Ng&s"
+    },
+    {
+      "name": "Hack Squats",
+      "desc": "Places more emphasis on quadriceps development.",
+      "image_url": "https://cdn-kbijj.nitrocdn.com/TZyKwYaTolAraTyTlyroeUSlFdlZcsZt/assets/images/optimized/rev-9c942de/forte-fitness.co.uk/wp-content/uploads/2024/05/pendulum-squat.jpg"
+    }
+  ],
+  "arms": [
+    {
+      "name": "Hammer Curls",
+      "desc": "Targets the brachialis and forearm strength.",
+      "image_url": "https://julielohre.com/wp-content/uploads/2018/07/Hammer-Curls-with-Both-Arms-at-same-time.jpg"
+    },
+    {
+      "name": "Barbell Curls",
+      "desc": "The classic mass builder for the biceps peaks.",
+      "image_url": "https://cdn.mos.cms.futurecdn.net/FAziQdwtGwvYoFqohf5aqF.jpg"
+    },
+    {
+      "name": "Preacher Curls",
+      "desc": "Isolates the biceps and reduces momentum cheating.",
+      "image_url": "https://cdn.mos.cms.futurecdn.net/Wqqzd7nETz5tucNVGXXBUW.jpg"
+    },
+    {
+      "name": "Concentration Curls",
+      "desc": "Enhances peak contraction and muscle focus.",
+      "image_url": "https://fitnessvolt.com/wp-content/uploads/2022/02/Concentration-Curl-Guide.jpg"
+    },
+    {
+      "name": "Incline Dumbbell Curls",
+      "desc": "Provides a deeper stretch for long head development.",
+      "image_url": "https://cdn.muscleandstrength.com/sites/default/files/alternating-incline-dumbbell-curl.jpg"
+    },
+    {
+      "name": "Cable Curls",
+      "desc": "Maintains constant tension throughout the movement.",
+      "image_url": "https://app-media.fitbod.me/v2/529/images/landscape/0_960x540.jpg"
+    },
+    {
+      "name": "EZ Bar Curls",
+      "desc": "Reduces wrist strain while effectively targeting biceps.",
+      "image_url": "https://cdn.mos.cms.futurecdn.net/882r52chfQqDHNLeEAUnUB.jpg"
+    },
+    {
+      "name": "Reverse Curls",
+      "desc": "Strengthens forearms and brachioradialis muscles.",
+      "image_url": "https://boxlifemagazine.com/wp-content/uploads/2023/09/Untitled-design-2023-06-07T100025.006-1-1-1.png"
+    }
+  ],
+  "chest": [
+    {
+      "name": "Incline Dumbbell Press",
+      "desc": " A free-weight upper-chest press performed on an incline bench that also strongly recruits the front delts and triceps while allowing a greater range of motion and independent arm movement for balanced chest development.",
+      "image_url": "https://phantom.estaticos-marca.com/02a5b12d83001cb819e8a6b0134fa646/crop/17x0/800x441/resize/828/f/jpg/assets/multimedia/imagenes/2022/05/27/16536599068607.jpg"
+    },
+    {
+      "name": "Incline Bench Press",
+      "desc": " A barbell pressing exercise done on an incline bench that emphasizes the upper portion of the pectorals while also involving the shoulders and triceps for overall pressing strength and chest mass.",
+      "image_url": "https://focusedonfit.com/s/uploads/2014/01/Barbell-Incline-Press1.jpg"
+    },
+    {
+      "name": "Dumbbell Bench Press",
+      "desc": "A flat-bench chest press using dumbbells that targets the pectorals, front delts, and triceps while promoting a deeper stretch and more unilateral control than a barbell press.",
+      "image_url": "https://training.fit/wp-content/uploads/2020/02/bankdruecken-kurzhantel-schraeg.png"
+    },
+    {
+      "name": "Bench Press",
+      "desc": "A foundational barbell compound lift where you press the weight from the chest to arm’s length, primarily building the pectorals, anterior deltoids, and triceps while improving upper-body strength.",
+      "image_url": "https://mtntough.com/cdn/shop/articles/mtn_231370-header-1.png?v=1696539077"
+    },
+    {
+      "name": "Smith Machine Press",
+      "desc": "A chest press performed on a fixed bar path that targets the chest, shoulders, and triceps while offering added stability and making it easier to focus on controlled hypertrophy work.",
+      "image_url": "https://liftmanual.com/wp-content/uploads/2023/04/smith-incline-bench-press.jpg"
+    },
+    {
+      "name": "Dips",
+      "desc": "A bodyweight pressing movement, often called a classic chest-and-triceps builder, where leaning forward increases chest involvement while still heavily training the triceps and front shoulders.",
+      "image_url": "https://training.fit/wp-content/uploads/2020/02/dips.png"
+    },
+    {
+      "name": "Machine Chest Fly",
+      "desc": "An isolation exercise in which the arms move in an arcing motion to bring the handles together, directly training the pectoral muscles with constant tension and minimal triceps involvement.",
+      "image_url": "https://training.fit/wp-content/uploads/2020/02/butterflys.png"
+    },
+    {
+      "name": "Push Ups",
+      "desc": "A bodyweight horizontal pressing exercise that works the chest, triceps, and shoulders while also requiring core stability, making it a versatile movement for strength and muscular endurance.",
+      "image_url": "https://training.fit/wp-content/uploads/2020/02/liegestuetze.png"
+    }
+  ],
+  "abs": [
+    {
+      "name": "Lying Floor Leg Raise",
+      "desc": " A lower-ab-focused bodyweight movement where you raise your legs from the floor under control, also challenging the hip flexors and core stability.",
+      "image_url": "https://i.ytimg.com/vi/Wp4BlxcFTkE/maxresdefault.jpg"
+    },
+    {
+      "name": "Weighted Crunch",
+      "desc": "A resistance-based abdominal exercise where added weight increases tension on the rectus abdominis, helping build stronger and thicker abs.",
+      "image_url": "https://training.fit/wp-content/uploads/2020/01/kabelzugcrunches.png"
+    },
+    {
+      "name": "Leg Raises",
+      "desc": "A core exercise involving lifting the legs to target the lower portion of the abdominals while also engaging the hip flexors and improving trunk control.",
+      "image_url": "https://hips.hearstapps.com/hmg-prod/images/lying-leg-raises-1546550690.jpg?crop=0.750xw:1.00xh;0.0829xw,0&resize=640:*"
+    },
+    {
+      "name": "Cable Crunch",
+      "desc": "A kneeling or standing ab exercise using a cable stack to provide constant resistance while you flex the spine, strongly targeting the rectus abdominis.",
+      "image_url": "https://mtntough.com/cdn/shop/articles/mtn_231370-header-1.png?v=1696539077"
+    },
+    {
+      "name": "Plank",
+      "desc": "An isometric core exercise where you hold a straight-body position to train abdominal bracing, spinal stability, and endurance through the entire core.",
+      "image_url": "https://www.inspireusafoundation.org/wp-content/uploads/2023/07/plank-benefits-1024x576.png"
+    },
+    {
+      "name": "Abdominal Air Bike",
+      "desc": "A dynamic abs movement combining a bicycle-style leg motion with trunk rotation to work the rectus abdominis, obliques, and hip flexors.",
+      "image_url": "https://i.ytimg.com/vi/PmTAFyWlb3g/maxresdefault.jpg"
+    },
+    {
+      "name": "Rotating Mountain Climber",
+      "desc": "A fast-paced core and conditioning exercise where the knees drive across the body to engage the abs, obliques, shoulders, and cardiovascular system.",
+      "image_url": "https://bunny-wp-pullzone-wwrvnwx855.b-cdn.net/wp-content/uploads/2023/07/3-12-Mountain-Climber.jpg"
+    },
+    {
+      "name": "Russian Twist",
+      "desc": "A rotational core exercise performed by twisting the torso side to side, primarily targeting the obliques while also involving the rectus abdominis and deeper stabilizers.",
+      "image_url": "https://julielohre.com/wp-content/uploads/2018/02/Russian-Twist-Exercise.jpg"
+    },
+    {
+      "name": "Hands Overhead Ab Crunch",
+      "desc": "An abdominal crunch variation with the arms extended overhead to increase lever length and place greater demand on the upper abs during spinal flexion.",
+      "image_url": "https://www.shutterstock.com/image-photo/home-training-sporty-smiling-african-600nw-2570642943.jpg"
+    }
+  ],
+  "shoulders": [
+    {
+      "name": "Shoulder Press With Dumbbells",
+      "desc": "A dumbbell overhead press that primarily builds the front and side delts while also recruiting the triceps and upper chest, with each arm working independently for balanced shoulder development.",
+      "image_url": "https://training.fit/wp-content/uploads/2020/03/schulterdruecken-kurzhanteln.png"
+    },
+    {
+      "name": "Rear Delt Fly",
+      "desc": "An isolation movement where the arms move out and back to target the rear deltoids, while also engaging the upper back muscles that help support shoulder posture.",
+      "image_url": "https://intowellness.in/wp-content/uploads/2024/10/Rear_Delt_Workout_Machine.jpg"
+    },
+    {
+      "name": "Lateral Raises With Dumbbells",
+      "desc": "A classic shoulder isolation exercise in which the arms are raised out to the sides to emphasize the lateral deltoids and create wider-looking shoulders.",
+      "image_url": "https://www.dmoose.com/cdn/shop/articles/Dumbbell_Lateral_Raise_574b195f-d766-4e86-b230-a5333d026b75.jpg?v=1760111324"
+    },
+    {
+      "name": "Face Pulls",
+      "desc": "A cable-based pulling exercise that targets the rear delts, traps, and external rotators, widely used to improve shoulder health, posture, and upper-back balance.",
+      "image_url": "https://cdn.mos.cms.futurecdn.net/3ZAEXcd7cA3W2fMrVQY9EE-1200-80.jpg"
+    },
+    {
+      "name": "Shoulder External Rotation",
+      "desc": "A rotator cuff exercise focused on turning the arm outward against resistance to strengthen the external rotators and improve shoulder stability.",
+      "image_url": "https://www.pwfitness.ca/wp-content/uploads/2019/05/Reminder-No.-201-7.png"
+    },
+    {
+      "name": "Machine Reverse Fly",
+      "desc": "A machine isolation exercise that emphasizes the rear delts and upper back by guiding the arms outward and backward through a controlled path.",
+      "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcShI2-3fA48RPmzrtEKVLKid7bOZXxg5Jxt-Q&s"
+    },
+    {
+      "name": "Machine Shoulder Press",
+      "desc": " A guided overhead pressing movement that trains the delts and triceps with added stability, making it useful for focused shoulder hypertrophy.",
+      "image_url": "https://liftmanual.com/wp-content/uploads/2023/04/lever-seated-shoulder-press.jpg"
+    },
+    {
+      "name": "Cable Lateral Rises",
+      "desc": "A cable variation of the lateral raise that targets the side delts with more consistent tension throughout the full range of motion.",
+      "image_url": "https://imagely.mirafit.co.uk/wp/wp-content/uploads/2023/09/Egyptian-lateral-raise-with-Mirafit-Cable-1024x683.jpg"
+    }
+  ]
+}

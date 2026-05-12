@@ -1,0 +1,138 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  margin-top: 1.2rem;
+  min-width: 85%;
+  max-width: 100%;
+  padding: 20px;
+}
+
+body{
+  font-family: "Roboto", monospace;
+  background: #eeeeee;
+  min-height: 100vh;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* my exercise grid */
+.exercises {
+  display: grid;
+  grid-template-columns: repeat(3,200px);
+  justify-content: center;
+  gap: 10px;
+  padding: 10px;
+}
+
+/* card-content */
+.exercise-card {
+  position: relative;
+  border-radius: 16px;
+  height: 200px;
+  width: 100%;
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.exercise-card img {
+  width: 100%;
+  height: 100%;
+  object-fit:cover;
+  display: block;
+  transition: transform 0.4s ease;
+}
+
+/* Overlay */
+.card-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: 0.3s ease;
+}
+
+.card-overlay h3 {
+  font-size: 20px;
+  color: white;
+  letter-spacing: 1px;
+}
+
+.card-overlay p {
+  font-size: 14px;
+  color: white;
+  font-weight: 400;
+  letter-spacing: 1px;
+}
+/* Hover Effects */
+.exercise-card:hover {
+  transform: translateY(-6px);
+}
+
+.exercise-card:hover img {
+  transform: scale(1.1);
+}
+
+.exercise-card:hover .card-overlay {
+  background: rgba(88, 75, 75, 0.03);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(3.7px);
+  -webkit-backdrop-filter: blur(3.7px);
+  border: 1px solid rgba(88, 75, 75, 0.3);
+  opacity: 1;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .exercise-card {
+    height: 180px;
+  }
+}
+
+@media (max-width: 480px) {
+  .exe-heading h1 {
+    font-size: 22px;
+  }
+
+  .exercise-card {
+    height: 150px;
+  }
+}
+
+/* motive-section */
+.motive-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  border-radius: 2px;
+  background-color: rgb(186, 186, 186);
+  padding: 10px;
+}
+
+.motive-section p {
+  margin: 0;
+}
+
+.motive-section p:nth-child(1) {
+  font-size: 30px;
+  color: #3f3f3f;
+  font-weight: bold;
+}
+
+.motive-section p:nth-child(2) {
+  font-size: 15px;
+  color: #3f3f3f;
+  font-weight: bold;
+}

@@ -1,0 +1,173 @@
+/* nav-bar styles */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.nav-container {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  flex: 1;
+  width: 80%;
+  margin: 0 auto;
+}
+
+header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center; 
+  justify-content: space-between; 
+  padding: 10px 5%; 
+  background: #222831;
+  height: 72px; 
+}
+
+nav ul {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+nav li {
+  position: relative;
+}
+
+nav a {
+  position: relative;
+  color: #EEEEEE; 
+  text-decoration: none;
+  text-transform: uppercase;
+  padding: 5px;
+  font-size: 14px;
+  transition: color 0.3s ease;
+}
+
+nav a:hover {
+  color: #00ADB5; 
+}
+
+.main-logo {
+  height: 60px; 
+  width: auto;
+}
+
+/* top hover line */
+nav > ul > li > a::before {
+  content: '';
+  display: block;
+  height: 3px;
+  background-color: #00ADB5; 
+  position: absolute;
+  top: 0;
+  width: 0%;
+  transition: width 0.25s ease-in-out;
+}
+
+nav > ul > li > a:hover::before {
+  width: 100%;
+}
+
+/* dropdown */
+.dropdown {
+  position: relative;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: #393E46; 
+  list-style: none;
+  padding: 10px 0;
+  margin: 0;
+  min-width: 180px;
+  display: none;
+  border-radius: 8px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+.dropdown-menu a {
+  display: block;
+  padding: 10px 15px;
+  font-size: 13px;
+  color: #EEEEEE;
+  text-transform: none;
+  transition: background 0.3s ease;
+}
+
+.dropdown-menu a:hover {
+  background: #00ADB5; 
+  color: #222831; 
+}
+
+/* motivation section high-light */
+.h-motive-sec {
+  color: rgb(0, 0, 0);
+}
+
+/* nav-end elements */
+nav button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+  border: none;
+  padding: 5px 5px;
+  border-radius: 10px;
+  cursor: pointer;
+  position: relative;
+}
+
+nav button:after {
+  position: absolute;
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.2s;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.user-log::after {
+  content: "Login";
+  font-weight: 500;
+  font-size: 12px;
+  color: #EEEEEE;
+}
+
+.ex-plan::after {
+  content: "Plan Exercise";
+  font-weight: 500;
+  font-size: 12px;
+  color: #EEEEEE;
+  white-space: nowrap;
+}
+
+nav button:hover {
+  background: rgba(170, 170, 170, 0.062);
+  transition: 0.5s;
+}
+
+nav button:hover::after {
+  opacity: 1;
+  visibility: visible;
+  top: 100%;
+}
+
+nav button svg {
+  color: #fff;
+}
+
+/* --------------------- */

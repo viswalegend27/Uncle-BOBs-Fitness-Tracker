@@ -1,0 +1,82 @@
+* {
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", monospace;
+  background: #EEEEEE;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  margin: 0;
+}
+
+.card {
+  box-sizing: border-box;
+  width: 400px;
+  height: 250px;
+  background: rgba(217, 217, 217, 0.58);
+  border: 1px solid rgb(67, 67, 67);
+  box-shadow: 12px 17px 51px rgba(0, 0, 0, 0.22);
+  backdrop-filter: blur(6px);
+  border-radius: 17px;
+  text-align: center;
+  transition: all 0.5s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  user-select: none;
+  font-weight: bolder;
+  color: black;
+}
+
+.card:hover {
+  border: 1px solid black;
+  transform: scale(1.05);
+}
+
+.card:active {
+  transform: scale(0.95) rotateZ(1.7deg);
+}
+
+/* hero container */
+
+.hero-container {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-title {
+  color: #0F172A;
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+.highlight {
+  display: block;
+  color: #F97316;
+}
+
+.options {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+
+.option {
+  display: block;             
+  padding: 5px;
+  width: 100px;
+  background: rgba(15, 23, 42, 1);
+  text-decoration: none;
+  color: rgba(255, 255, 255, 1);
+  border-radius: 4px;
+  text-align: center;
+}
+
+.option:hover {
+  background-color: rgba(15, 23, 42, 0.95);
+}
