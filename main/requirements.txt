@@ -6,3 +6,4 @@ python-dotenv
 psycopg2-binary
 pylint-django
 google-genai
+pymongo

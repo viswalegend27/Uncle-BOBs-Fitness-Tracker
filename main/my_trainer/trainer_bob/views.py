@@ -8,6 +8,10 @@ from django.http import JsonResponse
 from .forms import CalorieCalculatorForm, DietPlannerForm
 from .prompts.diets_prompt import build_diet_prompt
 from .services import height_conversion, lbs_to_kg, calculate_bmr, get_weightGoals
+from pymongo import MongoClient
+
+client = MongoClient("mongodb://localhost:27017/")
+db = client["trainer_bob"]
 
 
 def home_view(request):
@@ -19,31 +23,37 @@ def exercises_view(request):
 
 
 def muscle_detail_view(request, muscle_name):
-    file_path = os.path.join(settings.BASE_DIR, "trainer_bob/data/exercise_detail.json")
+    exe_collection = db["exercises_detail"]
+    document = exe_collection.find_one({"category": muscle_name.lower()})
+    cont = []
 
-    with open(file_path, "r", encoding="utf-8") as f:
-        data = json.load(f)
-    exercise = data.get(muscle_name.lower(), [])
-    cont = {
-        "name": muscle_name.capitalize(),
-        "exercises": exercise,
-    }
+    if document:
+        # contains actual exercise data
+        exercise_list = document.get("exercises", [])
+        # contains catgory
+        display_name = document.get("category", muscle_name).capitalize()
+    else:
+        exercise_list = []
+        display_name = muscle_name.capitalize()
+
+    cont = {"name": display_name, "exercises": exercise_list}
     return render(request, "muscle-detail.html", cont)
 
 
 def diet_blog_view(request):
-    file_path = os.path.join(settings.BASE_DIR, "trainer_bob/data/strategies.json")
+    blog_collection = db["exercise_blogs"]
 
-    with open(file_path, "r", encoding="utf-8") as file:
-        data = json.load(file)
+    blogs = list(blog_collection.find({}))
+    cal_def_data = [
+        blog.get("content") for blog in blogs if blog.get("type") == "caloric_deficit"
+    ]
+
+    cal_surp_data = [
+        blog.get("content") for blog in blogs if blog.get("type") == "caloric_surplus"
+    ]
 
     return render(
-        request,
-        "diet-blogs.html",
-        {
-            "cal_def": data["caloric_deficit"],
-            "cal_surp": data["caloric_surplus"],
-        },
+        request, "diet-blogs.html", {"cal_def": cal_def_data, "cal_surp": cal_surp_data}
     )
 
 
