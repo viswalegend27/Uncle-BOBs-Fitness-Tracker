@@ -89,7 +89,7 @@
   <div class="blog-window">
     <div class="form-window">
       <div class="blog-form">
-        <form class="blog-form" method="POST">
+        <form class="blog-form" id="blogForm" method="POST">
 
           <span class="blog-close-btn">&times;</span>
           <p class="blog-title">Create Blog</p>
@@ -102,6 +102,11 @@
           <div class="form-group">
             <label>Image URL</label>
             <input type="text" name="image" placeholder="Attach url" required />
+          </div>
+
+          <div class="form-group">
+            <label>Type</label>
+            <input type="text" name="type" placeholder="Based of" required />
           </div>
 
           <div class="form-group">

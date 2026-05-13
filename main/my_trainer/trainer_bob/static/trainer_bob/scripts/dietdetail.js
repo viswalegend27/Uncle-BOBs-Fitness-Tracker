@@ -3,6 +3,9 @@ const modal = document.querySelector(".float-window");
 const content = document.querySelector(".main-content");
 const createBlogBtn = document.querySelector(".create-blog");
 const createBlog = document.querySelector(".blog-window");
+const blogForm = document.getElementById("blogForm");
+// main-content -> content
+const blogContent = document.querySelector(".content");
 
 // logic for modal appearence when clicking read-more.
 document.querySelectorAll(".read-more").forEach(link => { 
@@ -27,7 +30,6 @@ document.querySelectorAll(".read-more").forEach(link => {
 });
 
 // logic for create-blog form
-
 createBlogBtn.addEventListener("click", (event) => {
   event.preventDefault();
   createBlog.classList.add("show");
@@ -63,3 +65,27 @@ document.querySelector(".float-window").addEventListener("click", (e) => {
     content.classList.remove("hide");
   }
 });
+
+// logic for blog creation
+blogForm.addEventListener("submit", async function(event) {
+    event.preventDefault();
+    const formData = new FormData(this);
+
+    let userInp = {}
+
+    for (const k of formData.keys()) {
+        if(formData.get(k).toString().length > 0) {
+            userInp[k] = formData.get(k).toString()
+        }
+    }
+    const blogResponse = await fetch("http://127.0.0.1:8000/create-blog/", {
+        method: "POST",
+        headers: {
+            "Content-Type" : "application/json"
+        },
+        body: JSON.stringify(userInp)
+    })    
+    const data = await blogResponse.json();
+    console.log(data)
+})
+

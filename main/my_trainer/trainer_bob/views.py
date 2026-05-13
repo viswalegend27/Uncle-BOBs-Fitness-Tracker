@@ -2,13 +2,16 @@ import json
 import re
 from google import genai
 import os
-from django.conf import settings
+
 from django.shortcuts import render
 from django.http import JsonResponse
-from .forms import CalorieCalculatorForm, DietPlannerForm
+from .forms import CalorieCalculatorForm, DietPlannerForm, BlogForm
 from .prompts.diets_prompt import build_diet_prompt
 from .services import height_conversion, lbs_to_kg, calculate_bmr, get_weightGoals
 from pymongo import MongoClient
+from django.http import JsonResponse
+from django.views.decorators.csrf import csrf_exempt
+from datetime import datetime
 
 client = MongoClient("mongodb://localhost:27017/")
 db = client["trainer_bob"]
@@ -151,3 +154,26 @@ def diet_planner_view(request):
     context = {"form": diet_form, "diet_data": diet_data}
 
     return render(request, "diet-planner.html", context)
+
+
+@csrf_exempt
+def create_blog(request):
+    if request.method == "POST":
+        data = json.loads(request.body)
+
+        form = BlogForm(data)
+        if form.is_valid():
+            db["exercise_blogs"].insert_one(
+                {
+                    "title": data.get("title"),
+                    "image": data.get("image"),
+                    "type": data.get("type"),
+                    "content": data.get("content"),
+                }
+            )
+            return JsonResponse({"message": "blog created sucessfully"})
+
+    if not form.is_valid():
+        return JsonResponse({"errors": form.errors}, status=400)
+
+    return JsonResponse({"message": "Invalid request"})
