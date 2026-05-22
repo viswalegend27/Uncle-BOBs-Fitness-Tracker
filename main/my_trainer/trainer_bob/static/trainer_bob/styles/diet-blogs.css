@@ -1,7 +1,7 @@
 /* body */
 body {
   font-family: "Roboto", monospace;
-  background: #eeeeee;
+  background: #EEEEEE;
   display: flex;
   flex-direction: column;
   min-height: 100vh;
@@ -9,12 +9,9 @@ body {
 }
 
 /* main-content */
-
 .main-content {
   display: flex;
   flex-flow: column;
-  visibility: visible;
-  opacity: 1;
   margin: 0 auto;
   align-items: center;
   justify-content: flex-end;
@@ -34,6 +31,7 @@ body {
   opacity: 0;
   visibility: hidden;
 }
+
 /* content div styles */
 .content {
   display: flex;
@@ -44,6 +42,7 @@ body {
   min-height: fit-content;
   max-height: 100%;
 }
+
 /* original content text block styles */
 .content-block {
   width: 1000px;
@@ -52,11 +51,12 @@ body {
   display: flex; 
   background: #393E46; 
   justify-content: flex-start; 
-  align-items: center;        
-  gap: 10px;     
+  align-items: center; 
+  gap: 10px; 
   backdrop-filter: blur(10px);
   transition: backdrop-filter 0.3s ease;
 }
+
 /* image styles */
 img {
   width: 250px;
@@ -82,23 +82,12 @@ img {
 
 .read-more:hover {
   cursor: pointer;
-  transform: 0.3 all;
   color: rgb(238, 224, 224);
-  -webkit-transition: 0.6 ease;
-  -moz-transition: 0.6 ease;
-  -ms-transition: 0.6 ease;
-  -o-transition: 0.6 ease;
-  transition: 0.6 ease;
 }
 
 /* intro */
 .intro {
   color: #CCCCCC;
-}
-
-/* text content styles */
-.text-cont p:last-of-type{
-  margin: 0;
 }
 
 /* text content styling for diet blog */
@@ -111,17 +100,19 @@ img {
   margin: 0;
 }
 
-/* headings */
+.text-cont p:last-of-type{
+  margin: 0;
+}
 
+/* headings */
 .text-cont h3 {
   color: #EEEEEE; 
 }
 
 /* float-window styling */
-
 .float-window {
   display: flex;
-  position: fixed;   
+  position: fixed; 
   top: 0;
   left: 0;
   width: 100%;
@@ -152,16 +143,14 @@ img {
   justify-content: flex-start;
   align-items: flex-start;
   color: #EEEEEE;
-  overflow-y: auto; /* enabling scroll function */
+  overflow-y: auto;
   background: #393E46;
   backdrop-filter: blur(12px);
   box-shadow:
-    0 20px 50px rgba(0, 0, 0, 0.6),
-    0 0 0 1px rgba(255, 255, 255, 0.05);
+  0 20px 50px rgba(0, 0, 0, 0.6),
+  0 0 0 1px rgba(255, 255, 255, 0.05);
   transform: translateY(20px) scale(0.95);
-  transition:
-    transform 0.35s ease,
-    opacity 0.35s ease;
+  transition: transform 0.35s ease, opacity 0.35s ease;
 }
 
 .float-window.show .small-window {
@@ -184,12 +173,11 @@ img {
 .str-text p {
   font-size: 14px;
   line-height: 1.7;
-  color: #eeeeee;
+  color: #EEEEEE;
   margin: 4px 0;
 }
 
 /* scroll bar style logic */
-
 .small-window::-webkit-scrollbar {
   width: 6px;
 }
@@ -204,7 +192,6 @@ img {
 }
 
 /* new blog */
-
 .new-blog {
   position: fixed;
   bottom: 20px;
@@ -228,10 +215,7 @@ img {
 .blog-window {
   position: fixed;
   inset: 0;
-  background: rgba(0, 0, 0, 0.55);
   display: none;
-  align-items: center;
-  justify-content: center;
   background: rgba(238, 238, 238, 0.6);
   backdrop-filter: blur(5px);
   z-index: 1000;
@@ -326,7 +310,9 @@ img {
   transform: translateY(-1px);
 }
 
-.close-btn {
+/* Combined close button styles */
+.close-btn, 
+.blog-close-btn {
   position: absolute;
   top: 14px;
   right: 18px;
@@ -336,22 +322,8 @@ img {
   transition: 0.2s ease;
 }
 
-.close-btn:hover {
-  color: #00ADB5;
-  transform: rotate(90deg) scale(1.1);
-}
-
-.blog-close-btn{
-  position: absolute;
-  top: 14px;
-  right: 18px;
-  color: #EEEEEE;
-  font-size: 24px;
-  cursor: pointer;
-  transition: 0.2s ease;
-}
-
-.blog-close-btn:hover{
+.close-btn:hover, 
+.blog-close-btn:hover {
   color: #00ADB5;
   transform: rotate(90deg) scale(1.1);
 }

@@ -19,56 +19,7 @@
 </head>
 
 <body>
-  <!-- nav-bar -->
-  <header>
-    <img src="{% static 'trainer_bob/images/main-logo.png'%}" alt="logo-main" class="main-logo" />
-
-    <div class="nav-container">
-      <nav>
-        <ul>
-          <li><a href="{% url 'home' %}">Home</a></li>
-
-          <li class="dropdown">
-            <a href="#">FIT Tools</a>
-
-            <ul class="dropdown-menu">
-              <li><a href="{% url 'calorie-calc' %}">Calorie Calculator</a></li>
-              <li><a href="{% url 'diet-planner' %}">Diet Planner</a></li>
-            </ul>
-          </li>
-
-          <li><a href="{% url 'diet_blogs'%}">Diet-Blogs</a></li>
-          <li><a href="#">About us</a></li>
-
-          <li>
-            <button class="user-log">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
-                <path fill="none" d="M0 0h24v24H0z"></path>
-
-                <path
-                  fill="currentColor"
-                  d="M12 12a5 5 0 1 0-5-5a5 5 0 0 0 5 5zm0 2c-4.418 0-8 2.239-8 5v1h16v-1c0-2.761-3.582-5-8-5z">
-                </path>
-              </svg>
-            </button>
-          </li>
-
-          <li>
-            <button class="ex-plan">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
-                <path fill="none" d="M0 0h24v24H0z"></path>
-
-                <path
-                  fill="currentColor"
-                  d="M9 2a2 2 0 0 0-2 2H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2h-1a2 2 0 0 0-2-2H9zm0 2h6v2H9V4zm-1 6h8v2H8v-2zm0 4h8v2H8v-2z">
-                </path>
-              </svg>
-            </button>
-          </li>
-        </ul>
-      </nav>
-    </div>
-  </header>
+  {% include 'includes/header.html' %}
 
   <!-- main container -->
   <div class="calculator">
@@ -94,23 +45,14 @@
           {% csrf_token %}
 
           <!-- hidden input which is used to determine the units -->
-          <input
-            type="hidden"
-            name="unit_system"
-            id="unit_system_input"
-            value="metric">
+          <input type="hidden" name="unit_system" id="unit_system_input" value="metric">
 
           <!-- my weight section -->
           <div class="form-group">
             <div class="user-weight-kgs user-weight" id="weight-system">
               <label for="weight-input" class="label">Weight</label>
 
-              <input
-                type="number"
-                id="weight-input"
-                name="weight"
-                placeholder="Kg"
-                class="user-input">
+              <input type="number" id="weight-input" name="weight" placeholder="Kg" class="user-input">
             </div>
           </div>
 
@@ -120,17 +62,9 @@
               <label class="label">Height</label>
 
               <div class="input-group height-label">
-                <input
-                  type="number"
-                  name="height_ft"
-                  placeholder="5 ft"
-                  class="user-input">
+                <input type="number" name="height_ft" placeholder="5 ft" class="user-input">
 
-                <input
-                  type="number"
-                  name="height_in"
-                  placeholder="5 in"
-                  class="user-input">
+                <input type="number" name="height_in" placeholder="5 in" class="user-input">
               </div>
             </div>
           </div>
@@ -140,11 +74,7 @@
               <label class="label">Height</label>
 
               <div class="input-group d-flex align-items-center">
-                <input
-                  type="number"
-                  name="height_cm"
-                  placeholder="165 cm"
-                  class="user-input">
+                <input type="number" name="height_cm" placeholder="165 cm" class="user-input">
               </div>
             </div>
           </div>
@@ -178,11 +108,7 @@
           <div class="form-group">
             <label class="label">Age</label>
 
-            <input
-              type="text"
-              name="age"
-              placeholder="20"
-              class="user-input">
+            <input type="text" name="age" placeholder="20" class="user-input">
           </div>
 
           <div class="form-group">
@@ -210,11 +136,9 @@
     </div>
   </div>
 
-  <script
-    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
-    crossorigin="anonymous">
-  </script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous">
+    </script>
 
   <script src="{% static 'trainer_bob/scripts/caloriecalc.js' %}"></script>
 </body>

@@ -34,7 +34,7 @@
   flex-shrink: 0;
 }
 
-/* Text container (NEW) */
+/* Text container */
 .exercises-content div {
   display: flex;
   flex-direction: column;
