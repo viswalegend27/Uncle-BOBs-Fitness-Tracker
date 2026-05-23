@@ -7,11 +7,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Bob gym assistant</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+  <link
+    href="https://fonts.googleapis.com/css2?family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&display=swap"
     rel="stylesheet">
   <link rel="stylesheet" href="{% static 'trainer_bob/styles/home.css' %}">
   <link rel="icon" href="./favicon.ico" type="image/x-icon">
@@ -19,34 +18,27 @@
 
 <body>
   {% include 'includes/header.html' %}
-  <!-- hero -->
-  <div class="hero-container">
-    <!-- card -->
-    <div class="card">
-      <h1 class="hero-title">
-        Track Your Progress
-        <span class="highlight">Crush Your Goals</span>
-      </h1>
 
-      <p class="hero-text">
-        Track Exercises or View Exercises
-      </p>
-
-      <div class="options">
-        <a href="{% url 'calorie-calc' %}" class="option">
-          Track
-        </a>
-        <a href="{% url 'exercises' %}" class="option">
-          View
-        </a>
-      </div>
-
+  <div class="get-started">
+    <div class="container">
+      <p class="txt-md bolder">A place to build yourself with structured program</p>
+      <a class="button-card" href="#exercise">Get Started</a>
     </div>
   </div>
 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
-    crossorigin="anonymous"></script>
+  <div class="trainer" id="exercise">
+    <div class="trainer-container">
+      <p class="txt-md bolder">Organize and optimize your training program</p>
+      <a class="button-card" href="{% url 'exercises' %}">Train</a>
+    </div>
+  </div>
+
+  <div class="diet-planner">
+    <div class="planner-container">
+      <p class="txt-md bolder">Plan and strategize your diet</p>
+      <a class="button-card" href="{% url 'diet-planner'%}">Plan </a>
+    </div>
+  </div>
 
 </body>
 

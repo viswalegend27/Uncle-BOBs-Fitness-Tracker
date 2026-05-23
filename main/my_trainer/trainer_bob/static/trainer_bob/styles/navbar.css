@@ -6,6 +6,10 @@
   box-sizing: border-box;
 }
 
+body {
+  font-family: "Google Sans", sans-serif;
+}
+
 .nav-container {
   display: flex;
   justify-content: flex-end;
@@ -171,3 +175,68 @@ nav button svg {
 }
 
 /* --------------------- */
+
+/* Hamburger button */
+
+.hamburger-button {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+  z-index: 1000;
+}
+
+.hamburger-button .hamburger-line {
+  width: 30px;
+  height: 3px;
+  background: black;
+  margin: 6px 0;
+}
+
+/* Mobile Menu */
+.mobile-menu {
+  position: fixed;
+  top: 0;
+  right: -300px;
+  width: 250px;
+  height: 100%;
+  z-index: 100;
+  background: white;
+  box-shadow: 0px 0px 10px rgba(0,0,0,0.2);
+  transition: right 0.3s ease-in-out;
+}
+
+.mobile-menu.active {
+  right: 0;
+}
+
+.mobile-menu ul {
+  margin-top: 72px;
+  padding-right: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  align-items: flex-start;
+}
+
+.mobile-menu ul li {
+  margin: 10px 0;
+}
+
+.mobile-menu ul li a {
+  font-size: 12px;
+  transition: 0.3s;
+  font-weight: 500;
+  color: rgb(15, 15, 15);
+}
+
+@media (max-width: 670px) {
+  .normal-menu {
+    display: none;
+  }
+
+  .hamburger-button {
+    display: block;
+  }
+}
