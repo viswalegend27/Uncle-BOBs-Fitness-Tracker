@@ -147,7 +147,3 @@ input:focus {
     transform: translateY(0) scale(1);
   }
 }
-
-.font-geist {
-  font-family: 'Geist', sans-serif !important;
-}
