@@ -122,7 +122,8 @@ nav > ul > li > a:hover::before {
 }
 
 /* nav-end elements */
-nav button {
+nav .user-log,
+nav .ex-plan {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -131,10 +132,12 @@ nav button {
   padding: 5px 5px;
   border-radius: 10px;
   cursor: pointer;
+  text-transform: capitalize;
   position: relative;
 }
 
-nav button:after {
+nav .user-log:after,
+nav .ex-plan:after {
   position: absolute;
   opacity: 0;
   visibility: hidden;
@@ -144,11 +147,12 @@ nav button:after {
   transform: translateX(-50%);
 }
 
-.user-log::after {
-  content: "Login";
+.user-log::after{
+  content: "Sign in";
   font-weight: 500;
   font-size: 12px;
   color: #EEEEEE;
+  white-space: nowrap;
 }
 
 .ex-plan::after {
@@ -159,18 +163,21 @@ nav button:after {
   white-space: nowrap;
 }
 
-nav button:hover {
+nav .user-log:hover,
+nav .ex-plan:hover {
   background: rgba(170, 170, 170, 0.062);
   transition: 0.5s;
 }
 
-nav button:hover::after {
+nav .user-log:hover::after,
+nav .ex-plan:hover::after {
   opacity: 1;
   visibility: visible;
   top: 100%;
 }
 
-nav button svg {
+nav .user-log svg,
+nav .ex-plan svg {
   color: #fff;
 }
 

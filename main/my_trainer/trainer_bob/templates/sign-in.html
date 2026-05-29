@@ -1,0 +1,94 @@
+{% load static %}
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sign In - Your Account</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&display=swap"
+    rel="stylesheet">
+</head>
+
+<body class="bg-zinc-50 text-zinc-900">
+  {% include 'includes/header.html' %}
+  <div class="h-[calc(100vh-72px)] flex flex-col lg:flex-row overflow-hidden">
+    <!-- Left column: sign‑in form -->
+    <section class="flex-1 flex items-center justify-center p-4 overflow-hidden">
+      <div class="w-full max-w-md">
+        <div class="flex flex-col gap-4">
+
+          <!-- Heading -->
+          <h1 class="animate-element animate-delay-100 text-3xl md:text-4xl font-semibold leading-tight">
+            <span class="font-light text-zinc-900 tracking-normal">Sign in</span>
+          </h1>
+          <p class="animate-element animate-delay-200 text-zinc-600">Continue your fitness journey</p>
+
+          <!-- Form -->
+          <form class="space-y-4">
+            <div class="animate-element animate-delay-300">
+              <label class="text-sm font-medium text-zinc-700">Email Address</label>
+              <div class="glass-border rounded-2xl mt-2">
+                <input type="email" placeholder="Enter your email address"
+                  class="w-full bg-transparent text-sm py-3 px-4 rounded-2xl text-zinc-900 placeholder-zinc-400">
+              </div>
+            </div>
+
+            <div class="animate-element animate-delay-400">
+              <label class="text-sm font-medium text-zinc-700">Password</label>
+              <div class="glass-border rounded-2xl mt-2 relative">
+                <input id="password" type="password" placeholder="Enter your password"
+                  class="w-full bg-transparent text-sm py-3 px-4 rounded-2xl text-zinc-900 placeholder-zinc-400">
+                <button type="button" id="togglePw" class="absolute inset-y-0 right-3 flex items-center">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    data-lucide="eye"
+                    class="lucide lucide-eye w-5 h-5 stroke-zinc-500 hover:stroke-zinc-700 transition-colors"></svg>
+                </button>
+              </div>
+            </div>
+
+            <div class="animate-element animate-delay-500 flex items-center justify-between text-sm">
+              <label class="flex items-center gap-3 cursor-pointer">
+                <input type="checkbox" class="custom-checkbox">
+                <span class="text-zinc-700">Keep me signed in</span>
+              </label>
+              <a href="#" class="hover:underline text-violet-600 transition-colors">Reset password</a>
+            </div>
+
+            <button type="submit"
+              class="animate-element animate-delay-600 w-full rounded-2xl bg-zinc-900 py-3 font-medium text-white hover:bg-zinc-800 transition-colors">Sign
+              In</button>
+          </form>
+
+          <!-- Divider -->
+          <div class="animate-element animate-delay-700 relative flex items-center justify-center">
+            <span class="w-24 border-t border-zinc-300"></span>
+            <span class="px-3 md:px-4 text-xs md:text-sm text-zinc-500">Or continue with</span>
+            <span class="w-24 border-t border-zinc-300"></span>
+          </div>
+
+          <!-- Google sign in -->
+          <button
+            class="animate-element animate-delay-800 w-full flex items-center justify-center gap-3 glass-border rounded-2xl py-3 hover:bg-zinc-100 transition-colors">
+            <img src="https://www.gstatic.com/firebasejs/ui/2.0.0/images/auth/google.svg" alt="Google logo"
+              class="h-5 w-5">
+            Continue with Google
+          </button>
+
+          <p class="animate-element animate-delay-900 text-center text-sm text-zinc-500">
+            New to our platform? <a href="#" class="text-violet-600 hover:underline transition-colors">Create
+              Account</a>
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <script src="{% static 'trainer_bob/scripts/signIn.js' %}"></script>
+</body>
+
+</html>
