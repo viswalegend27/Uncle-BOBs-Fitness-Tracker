@@ -94,3 +94,14 @@ class DietPlannerForm(forms.Form):
                 raise forms.ValidationError("Invalid body measurements")
 
         return cleaned_data
+
+
+class SignInForm(forms.Form):
+    emailField = forms.EmailField(max_length=200)
+    password = forms.CharField(max_length=32, widget=forms.PasswordInput)
+
+
+class CreateUserForm(forms.Form):
+    name = forms.CharField(max_length=32)
+    emailField = forms.EmailField(max_length=200)
+    password = forms.CharField(max_length=32, widget=forms.PasswordInput)

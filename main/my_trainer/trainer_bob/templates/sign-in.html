@@ -17,8 +17,9 @@
 
 <body class="bg-zinc-50 text-zinc-900">
   {% include 'includes/header.html' %}
-  <!-- Left column: sign‑in form -->
+  <!-- sign‑in form -->
   <section id="signIn" class="show flex-1 flex items-center justify-center p-4 min-h-[calc(100vh-72px)]">
+    {% csrf_token %}
     <div class="w-full max-w-md">
       <div class="flex flex-col gap-2">
 
@@ -29,11 +30,12 @@
         <p class="animate-element animate-delay-200 text-zinc-600">Continue your fitness journey</p>
 
         <!-- Form -->
-        <form class="space-y-2">
+        <form class="space-y-2" method="POST">
+          {% csrf_token %}
           <div class="animate-element animate-delay-300">
             <label class="text-xs font-medium text-zinc-700">Email Address</label>
             <div class="glass-border rounded-2xl mt-2">
-              <input type="email" placeholder="Enter your email address"
+              <input type="email" name="emailField" placeholder="Enter your email address"
                 class="w-full bg-transparent text-sm py-2.5 px-4 rounded-2xl text-zinc-900 placeholder-zinc-400">
             </div>
           </div>
@@ -41,9 +43,10 @@
           <div class="animate-element animate-delay-400">
             <label class="text-xs font-medium text-zinc-700">Password</label>
             <div class="glass-border rounded-2xl mt-2 relative">
-              <input id="password" type="password" placeholder="Enter your password"
+              <input id="password" type="password" name="password" placeholder="Enter your password"
                 class="w-full bg-transparent text-sm py-2.5 px-4 rounded-2xl text-zinc-900 placeholder-zinc-400">
-              <button type="button" id="togglePw" class="absolute inset-y-0 right-3 flex items-center">
+              <button type="button" id="togglePw" name="btn_sign_in"
+                class="absolute inset-y-0 right-3 flex items-center">
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
                   stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
                   data-lucide="eye"
@@ -61,18 +64,22 @@
           </div>
 
           <button type="submit"
-            class="animate-element animate-delay-600 w-full rounded-2xl bg-zinc-900 py-3 font-medium text-white hover:bg-zinc-800 transition-colors">Sign In</button>
+            class="animate-element animate-delay-600 w-full rounded-2xl bg-zinc-900 py-3 font-medium text-white hover:bg-zinc-800 transition-colors" name="btn_sign_in">Sign
+            In</button>
         </form>
 
         <p class="animate-element animate-delay-900 py-2 text-center text-sm text-zinc-500">
-          New to our platform? 
-          <a id="createAccount" class="text-violet-600 hover:underline transition-colors cursor-pointer">Create Account</a>
+          New to our platform?
+          <a id="createAccount" class="text-violet-600 hover:underline transition-colors cursor-pointer">Create
+            Account</a>
         </p>
       </div>
     </div>
   </section>
 
+  <!-- Sign up form -->
   <section id="signUp" class="hidden flex-1 flex items-center justify-center p-4 min-h-[calc(100vh-72px)]">
+    {% csrf_token %}
     <div class="w-full max-w-md">
       <div class="flex flex-col gap-4">
 
@@ -86,12 +93,12 @@
         </p>
 
         <!-- Form -->
-        <form class="space-y-4">
-
+        <form class="space-y-4" method="POST">
+          {% csrf_token %}
           <div class="animate-element animate-delay-300">
             <label class="text-xs font-medium text-zinc-700">Name</label>
             <div class="glass-border rounded-2xl mt-2">
-              <input type="text" placeholder="Enter your full name"
+              <input type="text" name="name" placeholder="Enter your full name"
                 class="w-full bg-transparent text-sm py-2.5 px-4 rounded-2xl text-zinc-900 placeholder-zinc-400">
             </div>
           </div>
@@ -99,7 +106,7 @@
           <div class="animate-element animate-delay-400">
             <label class="text-xs font-medium text-zinc-700">Email</label>
             <div class="glass-border rounded-2xl mt-2">
-              <input type="email" placeholder="Enter your email address"
+              <input type="email" name="emailField" placeholder="Enter your email address"
                 class="w-full bg-transparent text-sm py-2.5 px-4 rounded-2xl text-zinc-900 placeholder-zinc-400">
             </div>
           </div>
@@ -107,7 +114,7 @@
           <div class="animate-element animate-delay-500">
             <label class="text-xs font-medium text-zinc-700">Password</label>
             <div class="glass-border rounded-2xl mt-2 relative">
-              <input type="password" placeholder="Create a password"
+              <input type="password" name="password" placeholder="Create a password"
                 class="w-full bg-transparent text-sm py-2.5 px-4 rounded-2xl text-zinc-900 placeholder-zinc-400">
             </div>
           </div>
@@ -122,7 +129,7 @@
             </p>
           </div>
 
-          <button type="submit"
+          <button type="submit" name="btn_sign_up"
             class="animate-element animate-delay-800 w-full rounded-2xl bg-zinc-900 py-2 font-medium text-white hover:bg-zinc-800 transition-colors">
             Create Account
           </button>

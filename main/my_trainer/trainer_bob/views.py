@@ -3,11 +3,14 @@ import re
 from google import genai
 import os
 
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from django.http import JsonResponse
-from .forms import CalorieCalculatorForm, DietPlannerForm
+from .forms import CalorieCalculatorForm, DietPlannerForm, SignInForm, CreateUserForm
 from .prompts.diets_prompt import build_diet_prompt
 from .services import height_conversion, lbs_to_kg, calculate_bmr, get_weightGoals
+from django.contrib.auth.models import User
+from django.contrib.auth import authenticate, login
+from django.contrib import messages
 from pymongo import MongoClient
 from django.http import JsonResponse
 
@@ -155,4 +158,55 @@ def diet_planner_view(request):
 
 
 def sign_in_view(request):
-    return render(request, "sign-in.html")
+    # Initializing my forms here.
+    sign_in_form = SignInForm()
+    sign_up_form = CreateUserForm()
+
+    if request.method == "POST":
+        if "btn_sign_up" in request.POST:
+            sign_up_form = CreateUserForm(request.POST)
+            if sign_up_form.is_valid():
+                name = sign_up_form.cleaned_data["name"]
+                email = sign_up_form.cleaned_data["emailField"]
+                password = sign_up_form.cleaned_data["password"]
+
+                if User.objects.filter(email=email).exists():
+                    messages.error(
+                        request, "An account with this email already exists."
+                    )
+                else:
+                    user = User.objects.create_user(
+                        username=name, email=email, password=password
+                    )
+                    user.first_name = name
+                    user.save()
+
+                    login(request, user)
+                    messages.success(request, "Account created successfully")
+                    return redirect("exercises")
+
+        elif "btn_sign_in" in request.POST:
+            sign_in_form = SignInForm(request.POST)
+            if sign_in_form.is_valid():
+                email = sign_in_form.cleaned_data["emailField"]
+                password = sign_in_form.cleaned_data["password"]
+
+                try:
+                    user_obj = User.objects.get(email=email)
+                    user = authenticate(
+                        request, username=user_obj.username, password=password
+                    )
+
+                    if user is not None:
+                        login(request, user)
+                        return redirect("exercises")
+                    else:
+                        messages.error(request, "Invalid password.")
+                except User.DoesNotExist:
+                    messages.error(request, "No account found with this email.")
+
+    return render(
+        request,
+        "sign-in.html",
+        {"sign_in_form": sign_in_form, "sign_up_form": sign_up_form},
+    )
